@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+}
+.container{
+    width: 70%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem auto;
+}
+header{
+    justify-self: center;
+}
+main{
+    margin-top: 5rem;    
+    font-weight: 400;
+}
+input[type=text]{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid black;
+}
+input[type=number]{
+    width: 50   px;
+    border-bottom: 1px solid black;
+    font-size: 1em;
+}
+input[type=month]{
+    font-size: 1em;
+}
+#firma{
+    touch-action: none;
+}
+button{
+    width: 22px;
+    border: 0.5px solid rgba(0, 0, 0, 0.479);
+    border-radius: 3px;
+}
+#btnCrearPdf{
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    right: 100px;
+}
+
+@media only screen and (max-width: 600px){
+    .container{
+        width: 400px;
+    }
+    canvas{
+        touch-action: none;
+    }
+}
