@@ -17,16 +17,15 @@
         <main>
             <div class="consentimiento"> 
                 <section>
-                    <p>Yo <input type="text" /> identificado(a) con número de cedula <input type="text" />, expedida en la ciudad de <input type="text">, declaro que conozco y
+                    <p>Yo <input type="text" /> identificado(a) con número de cedula <input type="number" />, expedida en la ciudad de <input type="text">, declaro que conozco y
                         acepto las condiciones incluidas en las políticas y condiciones de clientes por MAGICA
                         ESCULTURA S.A.S, las cuales consisten en que una vez cancelado algún abono o pago, por
                         concepto de tratamientos estéticos o procedimientos quirúrgicos, no se realizará ningún
                         reintegro del valor abonado por parte de ellos. Por lo tanto, el abono será redimible en
                         otro tratamiento o en bonos de regalo.</p>
                     <br><br>
-                    <p>En constancia de lo anterior se firma en Santiago de Cali, a los <input type="number" /> días del mes de
-                        
-                        <input type="month" name="" id="" />
+                    <p>En constancia de lo anterior se firma en Santiago de Cali, a los <span id="day"></span> días del mes de 
+                        <span id="month"></span> del <span id="year"></span>
 
                 </section>
                 <section>
@@ -35,7 +34,7 @@
                     <button id="clear"><img src="./images/recycle-sign.png" width="20" alt=""></button>
                     <div class="datos">
                         <p>Firma del Paciente</p>
-                        <p>CC <input id="cedula" type="text"></p>
+                        <p>CC <input id="cedula" type="number"></p>
                     </div>
                     <button id="btnCrearPdf">Click aquí</button>
                 </section>

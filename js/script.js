@@ -105,9 +105,12 @@ document.addEventListener("DOMContentLoaded", () => {
         let inputs = document.querySelectorAll("input")
         let array = [... inputs]
 
+        clearButton.style.display = "none"
+        $boton.style.display = "none"
+
         array.forEach(function(v){
-            console.log(v)
             let val = v.value
+            console.log(val)
             let element = document.createElement("span")
             element.innerHTML ="<span>" + val + "</span>"
             v.parentNode.replaceChild(element, v)            
@@ -129,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 },
                 jsPDF: {
                     unit: "in",
-                    format: "letter",
+                    format: "a4",
                     orientation: 'portrait' // landscape o portrait
                 }
             })
@@ -140,4 +143,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     
 });
+
+var datenow =new Date();
+console.log(datenow)
+var day = document.getElementById("day")
+var month = document.getElementById("month")
+var year = document.getElementById("year")
+var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+day.innerHTML = "<span>" + datenow.getDate() + "</span>"
+month.innerHTML = "<span>" + meses[datenow.getMonth()] + "</span>"
+year.innerHTML = "<span>" + datenow.getFullYear() + "</span>"
 
