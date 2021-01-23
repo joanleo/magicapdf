@@ -101,6 +101,8 @@ function getTouchPos(canvasDom, touchEvent) {
 document.addEventListener("DOMContentLoaded", () => {
     // Escuchamos el click del botón
     const $boton = document.querySelector("#btnCrearPdf");
+    
+    
     $boton.addEventListener("click", () => {
         let inputs = document.querySelectorAll("input")
         let array = [... inputs]
@@ -108,15 +110,18 @@ document.addEventListener("DOMContentLoaded", () => {
         clearButton.style.display = "none"
         $boton.style.display = "none"
 
+        const cedula = document.getElementById("cedula")
+        let valueCedula = cedula.value
+        const cedula1 = document.getElementById("cedula1")
+        console.log(valueCedula)
+        cedula1.innerHTML = "<span>" + valueCedula + "</span>"
         array.forEach(function(v){
             let val = v.value
-            console.log(val)
             let element = document.createElement("span")
             element.innerHTML ="<span>" + val + "</span>"
             v.parentNode.replaceChild(element, v)            
             /* this.replace(/<input[^>]*>/g,'<p>').replace(/<\/input>/g,'</p>')  */
         })
-        console.log(array)
         const $elementoParaConvertir = document.body; // <-- Aquí puedes elegir cualquier elemento del DOM
         html2pdf()
             .set({
@@ -145,7 +150,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 var datenow =new Date();
-console.log(datenow)
 var day = document.getElementById("day")
 var month = document.getElementById("month")
 var year = document.getElementById("year")
