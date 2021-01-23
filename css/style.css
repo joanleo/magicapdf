@@ -4,10 +4,17 @@
     border: 0;
 }
 body{
+    width: 100%;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 0.05em;
     line-height: 2em;
+    background: url('../images/magicaMarca.jpg') no-repeat; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
 }
 .container{
     width: 80%;
@@ -19,6 +26,7 @@ body{
     margin: 0.2rem auto;
 }
 header{
+    margin-top: 8rem;
     justify-self: center;
 }
 main{
