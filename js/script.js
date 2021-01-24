@@ -111,9 +111,8 @@ document.addEventListener("DOMContentLoaded", () => {
         $boton.style.display = "none"
 
         const cedula = document.getElementById("cedula")
-        let valueCedula = cedula.value
+        var valueCedula = cedula.value
         const cedula1 = document.getElementById("cedula1")
-        console.log(valueCedula)
         cedula1.innerHTML = "<span>" + valueCedula + "</span>"
         array.forEach(function(v){
             let val = v.value
@@ -126,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
         html2pdf()
             .set({
                 margin: 0,
-                filename: 'documento.pdf',
+                filename: valueCedula +'.pdf',
                 image: {
                     type: 'jpeg',
                     quality: 0.98
