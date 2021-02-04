@@ -1,7 +1,13 @@
+:root{
+    --color: #1A99BC;
+    --colorMedio: #5C9CB7;
+    --colorfin: #DEE1E6;
+}
 * {
     margin: 0;
     padding: 0;
     border: 0;
+    box-sizing: border-box;
 }
 body{
     width: 100%;
@@ -9,29 +15,40 @@ body{
     font-size: 14px;
     letter-spacing: 0.05em;
     line-height: 2em;
-    background: url('../images/magicaMarca.jpg') no-repeat; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -ms-background-size: cover;
-    background-size: cover;
 }
 .container{
     width: 80%;
+    margin: auto;
     padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0.2rem auto;
 }
-header{
-    margin-top: 8rem;
+.header{
+    width: 100vw;
+    height: 100vh;
+}
+header{    
+    margin-top: 10rem;
     justify-self: center;
 }
-main{
-    margin-top: 3rem;    
+h1, h2, h3{
+    text-align: center;
+}
+main{   
     font-weight: 400;
+}
+.index-container{
+    margin-top: -6rem;
+}
+.main-content{
+    margin-top: 6rem;
+}
+p{
+    width: 100%;
+    text-align: justify;
+    line-height: 1.6;
 }
 input[type=text]{
     font-family: 'Times New Roman', Times, serif;
@@ -40,7 +57,7 @@ input[type=text]{
     border-bottom: 1px solid black;
 }
 input[type=number]{
-    width: 50   px;
+    width: 100px;
     border-bottom: 1px solid black;
     font-size: 1em;
 }
@@ -67,7 +84,96 @@ button{
 }
 canvas{
     touch-action: none;
+    border: 1px solid #000000;
 }
+
+.header-home{
+    margin: 1rem;
+}
+.title{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.title-covid{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+#firmas{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+.consentimiento{
+    width: 100%;
+    margin: auto;
+    white-space:pre-line;
+}
+#alergias{
+    display: flex;
+}
+
+.accordion-container{
+    max-width: 35rem;
+}
+.accordion{
+    width: 25rem;
+    list-style: none;
+    padding: .5em 1em;
+    border-radius: 1em;
+    background-color: rgba(0,0,0,0.2);
+    box-shadow: 0 0.5em 2em -1em rgba(255,255,255,0.3);
+}
+.accordion-row{
+    position: relative;
+}
+.accordion-row:not(:last-child){
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.accordion-input{
+    position: absolute;
+    opacity: 0;
+}
+.accordion-label{
+    position: relative;
+    padding: 1em;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    font-weight: 700;
+    display: block;
+}
+.accordion-label:after{
+    content: "";
+    display: inline-block;
+    width: .5em;
+    height: .5em;
+    border: solid #000000;
+    border-width: 0 3px 3px 0;
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    transform: translateY(-60%) rotate(45deg);
+    transition: transform 0.3s ease-in-out;
+}
+.accordion-input:checked + .accordion-label:after{
+    transform: translateY(-25%) rotate(225deg);
+}
+.accordion-content{
+    overflow: hidden;
+    max-height: 0;
+    transition: all 0.3s ease-in-out;
+    padding: 0 1em;
+}
+.accordion-content > p{
+    margin: 0 0 1em;
+    /* color: ; */
+}
+.accordion-input:checked ~ .accordion-content{
+    max-height: 100vh;
+}
+
 
 @media only screen and (max-width: 600px){
     .container{
@@ -76,5 +182,16 @@ canvas{
     canvas{
         touch-action: none;
     }
+    #firmas{
+        display: flex;
+        flex-direction: column;
+    }
 
+
+}
+@media print{
+    #firmas{
+        display: flex;
+        flex-direction: column;
+    }
 }

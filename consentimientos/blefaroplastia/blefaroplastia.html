@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUTORIZACIÓN PARA BLEFAROPLASTIA</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/fontawesome.min.css" integrity="sha512-shT5e46zNSD6lt4dlJHb+7LoUko9QZXTGlmWWx0qjI9UhQrElRb+Q5DM7SVte9G9ZNmovz2qIaV7IWv0xQkBkw==" crossorigin="anonymous" />
+</head>
+<page>
+    <div class="container" id="container">
+        <div class="title">
+            <h1>CONSENTIMIENTO INFORMADO AUTORIZACIÓN PARA BLEFAROPLASTIA</h1>
+        </div>            
+        <div class="consentimiento">
+            <section>
+                <p>HISTORIA CLÍNICA No.: <input type="text" required/></p>
+                <p>NOMBRE DEL PACIENTE: <input type="text" required/></p>
+                <p>MEDICO TRATANTE:<input id="doctorName" type="text" required/></p>
+                <p>FECHA: <span id="date"></span></p>
+                <p>HORA: <span id="time"></span></p>
+                <p>1. Yo <input type="text" required/> identificado(a) con número de documento <input id="cedula" type="number" required />, expedida en la ciudad de <input type="text">, autorizo al Doctor <input id="doctorName" type="text" required/> y a sus asistentes, a realizarme la cirugía conocida como BLEFAROPLASTIA.</p>
+                <p>2. La naturaleza y efectos de la cirugía, los riesgos y complicaciones que se puedan presentar, así como métodos alternativos de tratamiento, me han sido informados y explicados a plena satisfacción por parte del Doctor <input id="doctorName" type="text" required/>, en razón de lo anterior he entendido que las cirugías grandes o pequeñas conllevan riesgos o complicaciones que pueden ser leves o causar hasta la muerte.</p>
+                <p><b>Los siguientes puntos han sido específicamente aclarados:</b></p>
+                <p>a. Las incisiones se realizan en y alrededor de los parpados por lo tanto producen una cicatriz.</p>
+                <p>b. Las líneas de incisión usualmente son pequeñas.</p>
+                <p>c. Habrá  coloración de la piel alrededor de los ojos por varios días y en algunos casos puede persistir por periodos considerablemente más largos de tiempo.</p>
+                <p>d. Existe la posibilidad de ectropión (inversión del parpado inferior).</p>                
+                <p>e. Puede existir la rara y remota posibilidad de pérdida de la visión.</p>                
+                <p>f. La cirugía está sujeta a las mismas complicaciones post-quirúrgicas de cualquier otro procedimiento operatorio.</p>
+                <div class="next-page"></div>
+                <p>g. Dada la naturaleza del procedimiento no se puede predecir de manera exacta los resultados finales y a mí no me ha dado ninguna garantía sobre resultados específicos.</p>
+                <p>3. Yo autorizo al Doctor <input id="doctorName" type="text" required/> a realizar cualquier otro procedimiento que el considere necesario para prever la condición establecida en el Párrafo No. 1 o para afrontar cualquier condición patológica inesperada que pueda presentarse durante la cirugía.</p>
+                <p>4. Consiento la administración de drogas anestésicas por el Doctor <input id="doctorName" type="text" required/> o bajo la dirección del médico responsable por este servicio. </p>
+                <p>5. Yo entiendo que la medicina y la cirugía no son ciencias exactas y que profesionales responsables y éticos, en ocasiones no pueden garantizar resultados. No se me ha prometido ni garantizado resultados definitivos. He comprobado que mi médico tratante ha estudiado mi problema y que tiene a su disposición la tecnología adecuada para realizar la cirugía, dentro de las limitaciones humanas.</p>
+                <p>6. Yo comprendo que los lados del cuerpo humano no son iguales y que nunca podrán serlo.</p>
+                <p>7. Doy permiso al Doctor <input id="doctorName" type="text" required/> para filmar o tomar fotografías clínicas con las que permanecerá en su poder, únicamente con fines médicos científicos.</p>
+                <p>8. Reconozco no padecer alergia a alguna sustancia usada hasta el momento, EXEPTO </p>
+                    <p>A:<input id="alergia1" type="text" required/> b:<input id="alergia2" type="text" required/> C:<input id="alergia3" type="text" required/></p>
+                <p>9. He leído y comprendido la información previa. Soy consciente de que los riesgos quirúrgicos y post-operatorios asociados con la Blefaroplastia  no pueden ser pronosticados completamente, incluso con la mejor atención médica, tecnológica y asistencia quirúrgica, y acepto dichas condiciones y limitaciones. Así mismo, he informado completamente a mi médico sobre mi historial clínico, incluyendo la totalidad de las condiciones que conozco podrían contraindicar la cirugía de Blefaroplastia y soy consciente de que algún fallo por mi parte al hacer esto podría originar complicaciones quirúrgicas y post-operatorias importantes.</p>                                                
+                <p>Estoy convencida (o) de que en mi persona los beneficios esperados de la Blefaroplastia superan los riesgos mencionados. Habiendo llegado a esta conclusión, me hago totalmente responsable de mi decisión de realizar el procedimiento.</p>
+                <div class="next-page"></div>
+                <p>10. Soy consciente que la cirugía plástica estética y sus posibles complicaciones no están cubiertas por la EPS  (Entidad Promotora de Salud), Medicina Prepagada ni por las pólizas de Salud.  Por lo tanto, estos gastos estarán a mi cargo.</p>                        
+            </section>
+            <section id="firmas">
+                <section id="paciente">
+                    <canvas id="firma" width="400" height="160">
+                    </canvas>
+                    <button id="clearp"><img src="../../images/recycle-sign.png" width="20" alt=""></button>
+                    <div class="datos">
+                        <p>Firma del paciente </p>
+                        <p>CC <span id="cedula1"></span></p>
+                    </div>
+                </section>
+                <section id="aneste">
+                    <canvas id="firma" width="400" height="160">
+                    </canvas>
+                    <button id="cleara"><img src="../../images/recycle-sign.png" width="20" alt=""></button>
+                    <div class="datos">
+                        <p>Firma del medico tratante</p>
+                        <!-- <p>CC <span id="cedula1"></span></p> -->
+                    </div>
+                </section>
+                <button id="btnCrearPdf"><img src="../../images/pdf.png" width="23" alt=""></button>
+            </section>
+        </div>
+    </div>
+    <script src="../../js/script.js"></script>
+    <script src="../../js/html2pdf.bunle.js"></script>
+    <script>
+        function aceptFunction(){
+            let acept = document.querySelector('#acept')
+            if(acept.checked == true){
+                acept.value = "X"
+            }
+
+        }
+    </script>
+</page>
+</html>
