@@ -34,7 +34,7 @@
                 <p>6. Yo comprendo que los lados del cuerpo humano no son iguales y que nunca podrán serlo.</p></li>
                 <p>7. Doy permiso al Doctor <input id="doctorName" type="text" required/> para filmar o tomar fotografías clínicas con las que permanecerá en su poder, únicamente con fines médicos científicos.</p></li>
                 <p>8. Reconozco no padecer alergia a alguna sustancia usada hasta el momento, EXEPTO </p>
-                    <p id="alergias">A:<input id="alergia1" type="text" required/> b:<input id="alergia2" type="text" required/> C:<input id="alergia3" type="text" required/></p>
+                    <p id="alergias"><span>A:<input id="alergia1" type="text" required/></span>   <span>b:<input id="alergia2" type="text" required/></span>  <span>C:<input id="alergia3" type="text" required/></span></p>
                 <p>9. He leído y comprendido la información previa. Soy consciente de que los riesgos quirúrgicos y post-operatorios asociados con la Septorinoplastia funcional  no pueden ser pronosticados completamente, incluso con la mejor atención médica, tecnológica y asistencia quirúrgica, y acepto dichas condiciones y limitaciones. Así mismo, he informado completamente a mi médico sobre mi historial clínico, incluyendo la totalidad de las condiciones que conozco podrían contraindicar la cirugía de Septorinoplastia funcional y soy consciente de que algún fallo por mi parte al hacer esto podría originar complicaciones quirúrgicas y post-operatorias importantes. 
                       Estoy convencida (o) de que en mi persona los beneficios esperados de la Septorinoplastia funcional superan los riesgos mencionados. Habiendo llegado a esta conclusión, me hago totalmente responsable de mi decisión de realizar el procedimiento.</p></li>
                 <div class="next-page"></div>
@@ -42,21 +42,21 @@
             </section>
             <section id="firmas">
                 <section id="paciente">
-                    <canvas id="firma" width="400" height="180">
+                    <canvas id="firma" width="400" height="160">
                     </canvas>
                     <button id="clearp"><img src="../../images/recycle-sign.png" width="20" alt=""></button>
                     <div class="datos">
                         <p>Firma del paciente </p>
-                        <!-- <p>CC <span id="cedula1"></span></p> -->
+                        <p>CC <span id="cedula1"></span></p>
                     </div>
                 </section>
                 <section id="aneste">
-                    <canvas id="firma" width="400" height="180">
+                    <canvas id="firma" width="400" height="160">
                     </canvas>
                     <button id="cleara"><img src="../../images/recycle-sign.png" width="20" alt=""></button>
                     <div class="datos">
                         <p>Firma del medico tratante</p>
-                        <p>CC <span id="cedula1"></span></p>
+                        <!-- <p>CC <span id="cedula1"></span></p> -->
                     </div>
                 </section>
                 <button id="btnCrearPdf"><img src="../../images/pdf.png" width="23" alt=""></button>
@@ -65,14 +65,5 @@
     </div>
     <script src="../../js/script.js"></script>
     <script src="../../js/html2pdf.bunle.js"></script>
-    <script>
-        function aceptFunction(){
-            let acept = document.querySelector('#acept')
-            if(acept.checked == true){
-                acept.value = "X"
-            }
-
-        }
-    </script>
 </page>
 </html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUTORIZACIÓN PARA SEPTORINOPLASTIA</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/fontawesome.min.css" integrity="sha512-shT5e46zNSD6lt4dlJHb+7LoUko9QZXTGlmWWx0qjI9UhQrElRb+Q5DM7SVte9G9ZNmovz2qIaV7IWv0xQkBkw==" crossorigin="anonymous" />
+</head>
+<page>
+    <div class="container" id="container">
+        <div class="title-covid">
+            <h1>CONSENTIMIENTO INFORMADO PARA CIRUGIA ELECTIVA, CIRUGIA FUNCIONAL, CIRUGIA PLASTICA, CIRUGIA ESTETICA Y REPARADORA DURANTE PANDEMIA POR SAR-Cov2 (COVID-19)</h1>
+                <h2>DR GUIOVANNY OJEDA LASPRILLA</h2>
+                <h3>REGISTRO 76-1574/1997</h3>
+                
+        </div>            
+        <div class="consentimiento">
+            <section>
+                <p>Yo, <input type="text" required /> identificado (a) con documento de identidad Tipo <input type="text" required /> con  Nº <input id="cedula" type="number" required />, de manera libre, voluntaria y espontánea y en pleno uso de mis condiciones mentales declaro que soy consciente que estoy optando por un procedimiento quirúrgico electivo que no es urgente y puede no ser medicamente necesario, como lo es la cirugía de  <input type="text" name="" id="" required />, por medio del presente documento manifiesto:</p>
+                <p>1. Se me ha suministrado información clara, la cual he comprendido, sobre el estado actual de riesgo por la presencia del coronavirus, SARS CoV-2 (COVID-19), que ha sido declarado pandemia mundial por la Organización Mundial de la Salud, que es un virus extremadamente contagioso y a la fecha, se cree que se propaga por contacto persona a persona, a través de las partículas de saliva, que pueden esparcirse al toser, estornudad y al hablar.</p>
+                <p>2. Declaro que el Dr. GUIOVANNY OJEDA y el personal asistencial de la Clínica están monitoreando de cerca esta situación y han puesto en marcha medidas preventivas según los lineamientos del Ministerio de Salud de Colombia y de la Organización Mundial de la Salud, destinadas a reducir la propagación de COVID-19.  Sin embargo, dada la naturaleza del virus, y su diseminación en todos los ambientes, entiendo que existe un riesgo inherente de infectarse con COVID-19 en virtud de proceder con la cirugía que he solicitado se me realice.</p>
+                <p>3. Declaro que no padezco condiciones y/o enfermedades prexistentes que representen un riesgo de comorbilidad para la evolución de la enfermedad, ante el contagio por COVID-19 (referencia tabla Minsalud adjunta).</p>
+                <p>4. Mis condiciones de salud actuales han sido evaluadas por mi cirujano y anestesiólogo y he informado con total veracidad, la ausencia de sintomatología como fiebre, tos, dolor de garganta, molestias respiratorias y otras que puedan ser consideradas de riesgo.</p>
+                <p>5. Entiendo que, incluso si me han hecho pruebas para COVID y he recibido un resultado negativo de la prueba, las pruebas en algunos casos pueden no detectar el virus o pude haber contraído COVID después de la prueba.</p>
+                <p>6. Entiendo que, si tengo una infección COVID-19, e incluso si no tengo ningún síntoma (asintomático), proceder con cirugía puede conducir a una mayor probabilidad de complicación y muerte.</p>
+                <p>7. Entiendo que la posible exposición a COVID-19 antes/durante/después de mi cirugía puede resultar en lo siguiente: un diagnóstico positivo de COVID-19, cuarentena/autoaislamiento extendido (de más de 14 días), pruebas adicionales, hospitalización que puede requerir terapia médica, tratamiento de cuidados intensivos, posible necesidad de intubación/apoyo al respirador, intubación a corto o largo plazo, los cuales están excluidos de pólizas de complicaciones quirúrgicas, por lo cual, cualquier tratamiento deberá ser asumido económicamente por el sistema de salud y por mí.   De igual forma dicho contagio, tiene secuelas aun totalmente no identificadas, que pueden afectar mi salud a largo plazo e incluso ocasionar la muerte.</p>
+                <p>8. Además, después de mi procedimiento quirúrgico, es posible que necesite atención adicional que pueda requerir que vaya a una sala de emergencias o un hospital.</p>
+                <p>9. Se me ha dado la opción de aplazar mi cirugía a una fecha posterior (aún incierta ante la permanencia del riesgo de contagio por la presencia del virus), sin embargo, entendiendo todos los riesgos potenciales de la cirugía misma, incluyendo, pero no limitado a las posibles complicaciones a corto y largo plazo relacionadas con COVID-19, manifiesto mi determinación voluntaria de que me realicen la cirugía solicitada. Doy constancia que de manera detallada se me ha suministrado información completa, suficiente, con un lenguaje sencillo y claro, de la cirugía a realizarme, como así mismo de los riesgos inherentes a la misma, como así mismo de los adicionales por el estado de riesgo de contagio por COVID-19 y todas sus implicaciones, los cuales he comprendido, asumiendo todos los riesgos a los que puedo estar expuesto(a) derivados de la cirugía que elegí realizarme en tiempo de pandemia por COVID-19.</p>
+                <div class="next-page"></div>
+                <p>Sin dudas al respecto y conocimiento total de lo expuesto en este consentimiento, expreso mi voluntad de realizarme el procedimiento quirúrgico de <input type="text" name="" id="" required /> y doy mi autorización plena y consciente para que el Dr GUIOVANNY OJEDA y todo el personal de La Clínica procedan con el mismo.</p>
+               
+                <p>Para constancia se firma en la ciudad de Cali, el día <span id="day"></span> del mes de <span id="month"></span> de <span id="year"></span>. </p>
+                
+            </section>
+            <section id="firmas">
+                <section id="paciente">
+                    <canvas id="firma" width="400" height="180">
+                    </canvas>
+                    <button id="clearp"><img src="../../images/recycle-sign.png" width="20" alt=""></button>
+                    <div class="datos">
+                        <p>Firma del paciente </p>
+                        <p>CC <span id="cedula1"></span></p>
+                    </div>
+                </section>
+                <section id="aneste">
+                    <canvas id="firma" width="400" height="180">
+                    </canvas>
+                    <button id="cleara"><img src="../../images/recycle-sign.png" width="20" alt=""></button>
+                    <div class="datos">
+                        <p>Firma del medico tratante</p>
+                        <!-- <p>CC <span id="cedula1"></span></p> -->
+                    </div>
+                </section>
+                <button id="btnCrearPdf"><img src="../../images/pdf.png" width="23" alt=""></button>
+            </section>
+    </div>
+    </div>
+    <script src="../../js/script.js"></script>
+    <script src="../../js/html2pdf.bunle.js"></script>
+    <script>
+        function aceptFunction(){
+            let acept = document.querySelector('#acept')
+            if(acept.checked == true){
+                acept.value = "X"
+            }
+
+        }
+    </script>
+</page>
+</html>

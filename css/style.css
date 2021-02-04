@@ -16,6 +16,9 @@ body{
     letter-spacing: 0.05em;
     line-height: 2em;
 }
+.body-index{
+    background: linear-gradient(to bottom, var(--color), var(--colorMedio), var(--colorfin));
+}
 .container{
     width: 80%;
     margin: auto;
@@ -111,9 +114,9 @@ canvas{
     margin: auto;
     white-space:pre-line;
 }
-#alergias{
+/* #alergias{
     display: flex;
-}
+} */
 
 .accordion-container{
     max-width: 35rem;
@@ -124,7 +127,7 @@ canvas{
     padding: .5em 1em;
     border-radius: 1em;
     background-color: rgba(0,0,0,0.2);
-    box-shadow: 0 0.5em 2em -1em rgba(255,255,255,0.3);
+    box-shadow: -1em 1.5em 1.5em -0.5em rgba(0,0,0,0.3);
 }
 .accordion-row{
     position: relative;
@@ -168,7 +171,17 @@ canvas{
 }
 .accordion-content > p{
     margin: 0 0 1em;
-    /* color: ; */
+    color: #000000;
+}
+.accordion-content > p:hover{
+    transform: scale(1.08);
+}
+a{
+    text-transform: uppercase;
+    text-decoration: none;
+}
+a:visited{
+    color: #000000;
 }
 .accordion-input:checked ~ .accordion-content{
     max-height: 100vh;
@@ -179,12 +192,23 @@ canvas{
     .container{
         width: 500px;
     }
+    .index-container{
+        margin-top: 1rem;
+    }
     canvas{
         touch-action: none;
     }
     #firmas{
         display: flex;
         flex-direction: column;
+    }
+    #alergias{
+        display: flex;
+        flex-direction: column;
+    }
+    #alergias span{
+        margin-top: .6rem;
+        margin-bottom: 0.8rem;
     }
 
 

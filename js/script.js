@@ -123,6 +123,26 @@ document.addEventListener("DOMContentLoaded", () => {
         let array = [... inputs]
         let deleteStyle = document.getElementById('container')
 
+        let alergia1 = document.getElementById('alergia1')
+        let alergia2 = document.getElementById('alergia2')
+        let alergia3 = document.getElementById('alergia3')
+
+        if(alergia1){
+            if(alergia1.value == ''){
+                alergia1.value = ' **********'
+            }
+        }
+        if(alergia2){
+            if(alergia2.value == ''){
+                alergia2.value = ' **********'
+            }
+        }
+        if(alergia3){
+            if(alergia3.value == ''){
+                alergia3.value = ' **********'
+            }
+        }
+
         let displayFirmas = document.getElementById('firmas')
         console.log(displayFirmas)
         displayFirmas.style.display = "flex"
@@ -226,25 +246,6 @@ function formatAMPM(date) {
     return strTime;
   }
 
-let alergia1 = document.getElementById('alergia1')
-let alergia2 = document.getElementById('alergia2')
-let alergia3 = document.getElementById('alergia3')
-
-if(alergia1){
-    if(alergia1.value == ''){
-        alergia1.value = ' **********'
-    }
-}
-if(alergia2){
-    if(alergia2.value == ''){
-        alergia2.value = ' **********'
-    }
-}
-if(alergia3){
-    if(alergia3.value == ''){
-        alergia3.value = ' **********'
-    }
-}
  /* onclone: (element) => {
                         const svgElements = Array.from(element.querySelectorAll('svg'));
                         console.log(svgElements)
