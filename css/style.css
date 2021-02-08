@@ -200,6 +200,9 @@ a:visited{
     canvas{
         touch-action: none;
     }
+    .accordion{
+        width: 20rem;
+    }
     #firmas{
         display: flex;
         flex-direction: column;
@@ -212,6 +215,30 @@ a:visited{
         margin-top: .6rem;
         margin-bottom: 0.8rem;
     }
+
+@media only screen and (max-width: 412px){
+    .container{
+        width: 350px;
+    }
+    .index-container{
+        margin-top: 1rem;
+    }
+    canvas{
+        touch-action: none;
+    }
+    #firmas{
+        display: flex;
+        flex-direction: column;
+    }
+    #alergias{
+        display: flex;
+        flex-direction: column;
+    }
+    #alergias span{
+        margin-top: .6rem;
+        margin-bottom: 0.8rem;
+    }
+}
 
 
 }
