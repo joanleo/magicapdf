@@ -7,59 +7,52 @@
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/fontawesome.min.css" integrity="sha512-shT5e46zNSD6lt4dlJHb+7LoUko9QZXTGlmWWx0qjI9UhQrElRb+Q5DM7SVte9G9ZNmovz2qIaV7IWv0xQkBkw==" crossorigin="anonymous" />
 </head>
-<page>    
-            <div class="title">
-                <h1>CONSENTIMIENTO INFORMADO AUTORIZACIÓN PARA ANESTESIA</h1>
-            </div>
-            <div class="consentimiento"> 
-                <section>
-                    <p>Yo <input type="text" required/> identificado(a) con número de documento <input id="cedula" type="number" required />, expedida en la ciudad de <input type="text">, en mi condición de paciente/tutor, certifico que el Dr. <input id="doctorName" type="text" required/> me ha explicado de manera clara y sencilla, los tipos de anestesia, los riesgos propios de cada una de las expectativas de complicaciones, teniendo en cuenta además de la anestesia, mi condición física y el tipo de cirugía a realizarme. Entiendo que si bien hemos elaborado un plan anestésico, este puede ser modificado en el transcurso de la operación, además de que el Anestesiólogo, usara los medios disponibles para brindar la mayor seguridad en el acto anestésico y en el manejo de las complicaciones que se presentaren. Es claro que no se me pueden garantizar resultados a pesar de todo ello y que he tenido la oportunidad de hacer preguntas para aclarar mis dudas.
-                        Informo al Anestesiólogo que SI <!-- <input type="radio" name="acept" id="acept" onclick="aceptFunction()"> NO <input type="checkbox" name="" id=""> -->  autorizo al personal médico para tomar fotos durante la intervención quirúrgica. 
-                    </p>
-                    <p><b>POSIBLES COMPLICACIONES EN SEDACION O ANESTESIA GENERAL</b></p>   
-                    <p><b>MENORES: </b>Reacción alérgica leve, nauseas, vómitos, temblor, flebitis, lesiones menores en labios, dientes, boca, espasmo leve de las cuerdas vocales, disminución de la fuerza o sensibilidad o dolor crónico por comprensión de nervios debido a la posición.
-                    </p>
-                    <p><b>MAYORES: </b>Hipotensión o hipertensión severas que lleven a problemas cardiacos o cerebrales como isquemia, infarto cardiaco, insuficiencia cardiaca, sangrado cerebral con disminución variable del estado de conciencia hasta el coma. Reacción alérgica severa, espasmo severo de las cuerdas vocales con edema pulmonar, bronco aspiración, bronco espasmo, trombosis venenosa con embolismo pulmonar, bronco graso. Estas complicaciones pueden llevar a un desenlace fatal.
-                    </p>
-                    <p><b>POSIBLES COMPLICACIONES EN ANESTESIA REGIONAL</b></p>
-                    <p>Cefalea o dolor de cabeza posterior a la punción de la duramadre. Temblor, nauseas, vomito, reacciones alérgicas, dolor lumbar, toxicidad por anestésicos locales, arritmias, disminución de la fuerza o sensibilidad temporal o permanente, bronco aspiración, bronco espasmo, trombosis venosa, embolismo pulmonar. Algunas de estas complicaciones pueden ser tan graves que comprometen la vida.
-                    </p>
-                    <p>En constancia de lo anterior se firma en Santiago de Cali, a los <span id="day"></span> días del mes de 
-                        <span id="month"></span> del <span id="year"></span>
-                    </p>
+<page>
+    <div class="container">
+        <div class="title">
+            <h1>CONSENTIMIENTO INFORMADO AUTORIZACIÓN PARA ANESTESIA</h1>
+        </div>
+        <div class="consentimiento"> 
+            <section>
+                <p>Yo <input type="text" required/> identificado(a) con número de documento <input id="cedula" type="number" required />, expedida en la ciudad de <input type="text">, en mi condición de paciente/tutor, certifico que el Dr. <input id="doctorName" type="text" required/> me ha explicado de manera clara y sencilla, los tipos de anestesia, los riesgos propios de cada una de las expectativas de complicaciones, teniendo en cuenta además de la anestesia, mi condición física y el tipo de cirugía a realizarme. Entiendo que si bien hemos elaborado un plan anestésico, este puede ser modificado en el transcurso de la operación, además de que el Anestesiólogo, usara los medios disponibles para brindar la mayor seguridad en el acto anestésico y en el manejo de las complicaciones que se presentaren. Es claro que no se me pueden garantizar resultados a pesar de todo ello y que he tenido la oportunidad de hacer preguntas para aclarar mis dudas.
+                    Informo al Anestesiólogo que SI <!-- <input type="radio" name="acept" id="acept" onclick="aceptFunction()"> NO <input type="checkbox" name="" id=""> -->  autorizo al personal médico para tomar fotos durante la intervención quirúrgica. 
+                </p>
+                <p><b>POSIBLES COMPLICACIONES EN SEDACION O ANESTESIA GENERAL</b></p>   
+                <p><b>MENORES: </b>Reacción alérgica leve, nauseas, vómitos, temblor, flebitis, lesiones menores en labios, dientes, boca, espasmo leve de las cuerdas vocales, disminución de la fuerza o sensibilidad o dolor crónico por comprensión de nervios debido a la posición.
+                </p>
+                <p><b>MAYORES: </b>Hipotensión o hipertensión severas que lleven a problemas cardiacos o cerebrales como isquemia, infarto cardiaco, insuficiencia cardiaca, sangrado cerebral con disminución variable del estado de conciencia hasta el coma. Reacción alérgica severa, espasmo severo de las cuerdas vocales con edema pulmonar, bronco aspiración, bronco espasmo, trombosis venenosa con embolismo pulmonar, bronco graso. Estas complicaciones pueden llevar a un desenlace fatal.
+                </p>
+                <p><b>POSIBLES COMPLICACIONES EN ANESTESIA REGIONAL</b></p>
+                <p>Cefalea o dolor de cabeza posterior a la punción de la duramadre. Temblor, nauseas, vomito, reacciones alérgicas, dolor lumbar, toxicidad por anestésicos locales, arritmias, disminución de la fuerza o sensibilidad temporal o permanente, bronco aspiración, bronco espasmo, trombosis venosa, embolismo pulmonar. Algunas de estas complicaciones pueden ser tan graves que comprometen la vida.
+                </p>
+                <p>En constancia de lo anterior se firma en Santiago de Cali, a los <span id="day"></span> días del mes de 
+                    <span id="month"></span> del <span id="year"></span>
+                </p>
+            </section>
+            <section id="firmas">
+                <section id="paciente">
+                    <canvas id="firma" width="400" height="180">
+                    </canvas>
+                    <button id="clearp"><img src="../../images/recycle-sign.png" width="20" alt=""></button>
+                    <div class="datos">
+                        <p>FIRMA DEL PACIENTE  O TUTOR </p>
+                        <p>CC <span id="cedula1"></span></p>
+                    </div>
                 </section>
-                <section id="firmas">
-                    <section id="paciente">
-                        <canvas id="firma" width="400" height="180">
-                        </canvas>
-                        <button id="clearp"><img src="../../images/recycle-sign.png" width="20" alt=""></button>
-                        <div class="datos">
-                            <p>FIRMA DEL PACIENTE  O TUTOR </p>
-                            <p>CC <span id="cedula1"></span></p>
-                        </div>
-                    </section>
-                    <section id="aneste">
-                        <canvas id="firma" width="400" height="180">
-                        </canvas>
-                        <button id="cleara"><img src="../../images/recycle-sign.png" width="20" alt=""></button>
-                        <div class="datos">
-                            <p>FIRMA ANESTESIOLOGO </p>
-                            <!-- <p>CC <span id="cedula1"></span></p> -->
-                        </div>
-                    </section>
-                    <button id="btnCrearPdf"><img src="../../images/pdf.png" width="23" alt=""></button>
+                <section id="aneste">
+                    <canvas id="firma" width="400" height="180">
+                    </canvas>
+                    <button id="cleara"><img src="../../images/recycle-sign.png" width="20" alt=""></button>
+                    <div class="datos">
+                        <p>FIRMA ANESTESIOLOGO </p>
+                        <!-- <p>CC <span id="cedula1"></span></p> -->
+                    </div>
                 </section>
-            </div>
+                <button id="btnCrearPdf"><img src="../../images/pdf.png" width="23" alt=""></button>
+            </section>
+        </div>
+    </div>
     <script src="../../js/script.js"></script>
     <script src="../../js/html2pdf.bunle.js"></script>
-    <script>
-        function aceptFunction(){
-            let acept = document.querySelector('#acept')
-            if(acept.checked == true){
-                acept.value = "X"
-            }
-
-        }
-    </script>
 </page>
 </html>

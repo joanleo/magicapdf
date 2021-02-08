@@ -3,15 +3,12 @@ var firmas = document.querySelectorAll('#firma')
 let clearPaciente = document.getElementById('clearp')
 let clearAnest = document.getElementById('cleara')
 
-console.log(clearPaciente)
-
-
 firmas.forEach(element=>{
     renderCanvasId(element)
 } )
 
  //clear canvas
-clearPaciente.addEventListener("click", clearFirmaPaciente)
+if(clearPaciente)clearPaciente.addEventListener("click", clearFirmaPaciente)
 
 function clearFirmaPaciente(){
     firmas[0].width = firmas[0].width;
@@ -117,90 +114,91 @@ document.addEventListener("DOMContentLoaded", () => {
     // Escuchamos el click del botón
     const $boton = document.querySelector("#btnCrearPdf");
     
+    if($boton){
+        $boton.addEventListener("click", () => {
+            let inputs = document.querySelectorAll("input")
+            let array = [... inputs]
+            let deleteStyle = document.getElementById('container')
     
-    $boton.addEventListener("click", () => {
-        let inputs = document.querySelectorAll("input")
-        let array = [... inputs]
-        let deleteStyle = document.getElementById('container')
-
-        let alergia1 = document.getElementById('alergia1')
-        let alergia2 = document.getElementById('alergia2')
-        let alergia3 = document.getElementById('alergia3')
-
-        if(alergia1){
-            if(alergia1.value == ''){
-                alergia1.value = ' **********'
-            }
-        }
-        if(alergia2){
-            if(alergia2.value == ''){
-                alergia2.value = ' **********'
-            }
-        }
-        if(alergia3){
-            if(alergia3.value == ''){
-                alergia3.value = ' **********'
-            }
-        }
-
-        let displayFirmas = document.getElementById('firmas')
-        console.log(displayFirmas)
-        displayFirmas.style.display = "flex"
-        displayFirmas.style.flexDirection = "space-between"
-
-        deleteStyle.classList.remove('container')
-
-        clearPaciente.style.display = "none"
-        if(clearAnest) clearAnest.style.display = "none"
-        $boton.style.display = "none"
-        firmas.forEach(firma=>firma.style.border = 'none')
-
-        const cedula = document.getElementById("cedula")
-        if (cedula)var valueCedula = cedula.value
-        const cedula1 = document.getElementById("cedula1")
-        cedula1.innerHTML = "<span>" + valueCedula + "</span>"
-        array.forEach(function(v){
-            let val = v.value
-            let element = document.createElement("span")
-            element.innerHTML ="<span>" + val + "</span>"
-            v.parentNode.replaceChild(element, v)            
-            /* this.replace(/<input[^>]*>/g,'<p>').replace(/<\/input>/g,'</p>')  */
-        })
-        const elementoParaConvertir = document.body; // <-- Aquí puedes elegir cualquier elemento del DOM
-        html2pdf()
-            .set({
-                margin: [15, 20, 30, 15],
-                filename: valueCedula +'.pdf',
-                image: {
-                    type: 'jpeg',
-                    quality: 1
-                },
-                html2canvas: {                   
-                    scale: 3, // A mayor escala, mejores gráficos, pero más peso
-/*                     //width: elementoParaConvertir.offsetWidth,
-                    windowWidth: elementoParaConvertir.offsetWidth * 5, */
-                    letterRendering: true,
-                },
-                isToggleStyle: true,
-                useCORS: true,
-                useDefaultFoot: true,
-                
-                jsPDF: {
-                    orientation: 'p',
-                    unit: 'mm',
-                    format: 'a4',
-                    putOnlyUsedFonts:true,
-                    floatPrecision: 16
-                },
-                pagebreak: {
-                    after: '.next-page'
+            let alergia1 = document.getElementById('alergia1')
+            let alergia2 = document.getElementById('alergia2')
+            let alergia3 = document.getElementById('alergia3')
+    
+            if(alergia1){
+                if(alergia1.value == ''){
+                    alergia1.value = ' **********'
                 }
+            }
+            if(alergia2){
+                if(alergia2.value == ''){
+                    alergia2.value = ' **********'
+                }
+            }
+            if(alergia3){
+                if(alergia3.value == ''){
+                    alergia3.value = ' **********'
+                }
+            }
+    
+            let displayFirmas = document.getElementById('firmas')
+            console.log(displayFirmas)
+            displayFirmas.style.display = "flex"
+            displayFirmas.style.flexDirection = "space-between"
+    
+            deleteStyle.classList.remove('container')
+    
+            clearPaciente.style.display = "none"
+            if(clearAnest) clearAnest.style.display = "none"
+            $boton.style.display = "none"
+            firmas.forEach(firma=>firma.style.border = 'none')
+    
+            const cedula = document.getElementById("cedula")
+            if (cedula)var valueCedula = cedula.value
+            const cedula1 = document.getElementById("cedula1")
+            cedula1.innerHTML = "<span>" + valueCedula + "</span>"
+            array.forEach(function(v){
+                let val = v.value
+                let element = document.createElement("span")
+                element.innerHTML ="<span>" + val + "</span>"
+                v.parentNode.replaceChild(element, v)            
+                /* this.replace(/<input[^>]*>/g,'<p>').replace(/<\/input>/g,'</p>')  */
             })
-            .from(elementoParaConvertir)
-            .save()
-            .catch(err => console.log(err));
-           
-    });
+            const elementoParaConvertir = document.body; // <-- Aquí puedes elegir cualquier elemento del DOM
+            html2pdf()
+                .set({
+                    margin: [15, 20, 30, 15],
+                    filename: valueCedula +'.pdf',
+                    image: {
+                        type: 'jpeg',
+                        quality: 1
+                    },
+                    html2canvas: {                   
+                        scale: 3, // A mayor escala, mejores gráficos, pero más peso
+    /*                     //width: elementoParaConvertir.offsetWidth,
+                        windowWidth: elementoParaConvertir.offsetWidth * 5, */
+                        letterRendering: true,
+                    },
+                    isToggleStyle: true,
+                    useCORS: true,
+                    useDefaultFoot: true,
+                    
+                    jsPDF: {
+                        orientation: 'p',
+                        unit: 'mm',
+                        format: 'a4',
+                        putOnlyUsedFonts:true,
+                        floatPrecision: 16
+                    },
+                    pagebreak: {
+                        after: '.next-page'
+                    }
+                })
+                .from(elementoParaConvertir)
+                .save()
+                .catch(err => console.log(err));
+               
+        });
+    }
     
 });
 

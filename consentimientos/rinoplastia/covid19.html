@@ -26,13 +26,12 @@
                 <p>6. Entiendo que, si tengo una infección COVID-19, e incluso si no tengo ningún síntoma (asintomático), proceder con cirugía puede conducir a una mayor probabilidad de complicación y muerte.</p>
                 <p>7. Entiendo que la posible exposición a COVID-19 antes/durante/después de mi cirugía puede resultar en lo siguiente: un diagnóstico positivo de COVID-19, cuarentena/autoaislamiento extendido (de más de 14 días), pruebas adicionales, hospitalización que puede requerir terapia médica, tratamiento de cuidados intensivos, posible necesidad de intubación/apoyo al respirador, intubación a corto o largo plazo, los cuales están excluidos de pólizas de complicaciones quirúrgicas, por lo cual, cualquier tratamiento deberá ser asumido económicamente por el sistema de salud y por mí.   De igual forma dicho contagio, tiene secuelas aun totalmente no identificadas, que pueden afectar mi salud a largo plazo e incluso ocasionar la muerte.</p>
                 <p>8. Además, después de mi procedimiento quirúrgico, es posible que necesite atención adicional que pueda requerir que vaya a una sala de emergencias o un hospital.</p>
-                <p>9. Se me ha dado la opción de aplazar mi cirugía a una fecha posterior (aún incierta ante la permanencia del riesgo de contagio por la presencia del virus), sin embargo, entendiendo todos los riesgos potenciales de la cirugía misma, incluyendo, pero no limitado a las posibles complicaciones a corto y largo plazo relacionadas con COVID-19, manifiesto mi determinación voluntaria de que me realicen la cirugía solicitada. Doy constancia que de manera detallada se me ha suministrado información completa, suficiente, con un lenguaje sencillo y claro, de la cirugía a realizarme, como así mismo de los riesgos inherentes a la misma, como así mismo de los adicionales por el estado de riesgo de contagio por COVID-19 y todas sus implicaciones, los cuales he comprendido, asumiendo todos los riesgos a los que puedo estar expuesto(a) derivados de la cirugía que elegí realizarme en tiempo de pandemia por COVID-19.</p>
-                <div class="next-page"></div>
+                <p>9. Se me ha dado la opción de aplazar mi cirugía a una fecha posterior (aún incierta ante la permanencia del riesgo de contagio por la presencia del virus), sin embargo, entendiendo todos los riesgos potenciales de la cirugía misma, incluyendo, pero no limitado a las posibles complicaciones a corto y largo plazo relacionadas con COVID-19, manifiesto mi determinación voluntaria de que me realicen la cirugía solicitada. Doy constancia que de manera detallada se me ha suministrado información completa, suficiente, con un lenguaje sencillo y claro, de la cirugía a realizarme, como así mismo de los riesgos inherentes a la misma, como así mismo de los adicionales por el estado de riesgo de contagio por COVID-19 y todas sus implicaciones, los cuales he comprendido, asumiendo todos los riesgos a los que puedo estar expuesto(a) derivados de la cirugía que elegí realizarme en tiempo de pandemia por COVID-19.</p>                
                 <p>Sin dudas al respecto y conocimiento total de lo expuesto en este consentimiento, expreso mi voluntad de realizarme el procedimiento quirúrgico de <input type="text" name="" id="" required /> y doy mi autorización plena y consciente para que el Dr GUIOVANNY OJEDA y todo el personal de La Clínica procedan con el mismo.</p>
-               
-                <p>Para constancia se firma en la ciudad de Cali, el día <span id="day"></span> del mes de <span id="month"></span> de <span id="year"></span>. </p>
-                
+                <div class="next-page"></div>
+                <p>Para constancia se firma en la ciudad de Cali, el día <span id="day"></span> del mes de <span id="month"></span> de <span id="year"></span>. </p>                
             </section>
+            <button id="btnCrearPdf"><img src="../../images/pdf.png" width="23" alt=""></button>
             <section id="firmas">
                 <section id="paciente">
                     <canvas id="firma" width="400" height="180">
@@ -51,21 +50,11 @@
                         <p>Firma del medico tratante</p>
                         <!-- <p>CC <span id="cedula1"></span></p> -->
                     </div>
-                </section>
-                <button id="btnCrearPdf"><img src="../../images/pdf.png" width="23" alt=""></button>
+                </section>                
             </section>
     </div>
     </div>
     <script src="../../js/script.js"></script>
     <script src="../../js/html2pdf.bunle.js"></script>
-    <script>
-        function aceptFunction(){
-            let acept = document.querySelector('#acept')
-            if(acept.checked == true){
-                acept.value = "X"
-            }
-
-        }
-    </script>
 </page>
 </html>
