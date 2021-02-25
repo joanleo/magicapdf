@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONSENTIMIENTO FACIAL</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/fontawesome.min.css" integrity="sha512-shT5e46zNSD6lt4dlJHb+7LoUko9QZXTGlmWWx0qjI9UhQrElRb+Q5DM7SVte9G9ZNmovz2qIaV7IWv0xQkBkw==" crossorigin="anonymous" />
+</head>
+<page>
+    <div class="container" id="container">
+        <div class="title">
+            <h1>CONSENTIMIENTO FACIAL</h1>
+        </div>            
+        <div class="consentimiento">
+            <section>
+                <p></p>
+                <p></p>
+                <p>Yo <input type="text" required/> identificado(a) con número de documento <input id="cedula" type="number" required />, expedida en la ciudad de <input type="text">, Por medio de la presente manifiesto de manera clara, consistente, libre y espontánea, autorizo a MÁGICA ESCULTURA S.A.S, para que por medio de sus esteticistas y/o médico, me sean realizados los tratamientos y procedimientos que he solicitado además de las indicaciones y recomendaciones das, sean estos superficiales, a título gratuito u oneroso y los demás procedimientos de cualquier naturaleza enunciados o descritos en el plan de tratamiento contenido en mi ficha técnica de servicios. Manifiesto que me han explicado los tratamientos y procedimientos a realizarme y la forma como se practicarán, así como su naturaleza, mecanismos de aplicación, de acción, efectos secundarios, contraindicaciones e incapacidades, como de los productos suministrados, aplicados y de los productos indicados para uso en casa.                     También reconozco, acepto y declaro expresamente que en todo caso y en virtud de la naturaleza del servicio prestado la obligación, de MÁGICA ESCULTURA, de cualquiera de sus esteticistas y /o médico, que participen en mi atención en desarrollo de los procedimientos establecidos en este plan de tratamiento, consulta, orientación, solicitado por mi u ofrecido a cualquier título, será siempre de medios y no de resultados.</p>
+                <p>Declaro que la información suministrada por mi para efectos de la historia clínica es verdadera y entiendo y acepto la responsabilidad civil y penal que me asiste por la omisión o manifestación errada sobre mi estado de salud. Informo a veracidad si sufro de alguna alergia, sufro de alguna enfermedad o me estoy sometiendo o me he sometido a algún procedimiento o tratamiento.</p>
+                <div class="next-page"></div>
+                <p>Para constancia de lo anterior se firma a los 20 días del mes de enero de 2021</p>
+            </section>
+            <section id="firmas">
+                <section id="paciente">
+                    <canvas id="firma" width="400" height="160">
+                    </canvas>
+                    <button id="clearp"><img src="../../images/recycle-sign.png" width="20" alt=""></button>
+                    <div class="datos">
+                        <p>Firma del paciente </p>
+                        <p>CC <span id="cedula1"></span></p>
+                    </div>
+                </section>
+                <div style="height: 40px;">
+                    <button id="btnCrearPdf"><img src="../../images/pdf.png" width="23" alt=""></button>
+                </div>
+            </section>
+    </div>
+    </div>
+    <script src="../../js/script.js"></script>
+    <script src="../../js/html2pdf.bunle.js"></script>
+</page>
+</html>
+
+
+<!-- <section id="aneste">
+    <canvas id="firma" width="400" height="160">
+    </canvas>
+    <button id="cleara"><img src="../../images/recycle-sign.png" width="20" alt=""></button>
+    <div class="datos">
+        <p>Firma del medico tratante</p>
+        <p>CC <span id="cedula1"></span></p>
+    </div>
+</section> -->

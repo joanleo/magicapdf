@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>CONSENTIMIENTO PRODUCTOS FILLMED</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/fontawesome.min.css" integrity="sha512-shT5e46zNSD6lt4dlJHb+7LoUko9QZXTGlmWWx0qjI9UhQrElRb+Q5DM7SVte9G9ZNmovz2qIaV7IWv0xQkBkw==" crossorigin="anonymous" />
+</head>
+<page>
+    <div class="container" id="container">
+        <div class="title">
+            <h1>CONSENTIMIENTO INFORMADO DEL PACIENTE PARA EL TRATAMIENTO CON PRODUCTOS FILLMED</h1>
+        </div>            
+        <div class="consentimiento">
+            <section>
+                <P>Los productos FILLMED ( <label for="X-HA3">X-HA3</label><input type="checkbox" name="X-HA3" id="X-HA3"> <label for="M-HA18">M-HA18</label><input type="checkbox" name="M-HA18" id="M-HA18"> <label for="XHA">XHA Volume</label><input type="checkbox" name="XHA" id="XHA"> <label for="UNIVERSAL">ART FILLER UNIVERSAL</label><input type="checkbox" name="UNIVERSAL" id="UNIVERSAL"> <label for="LIPS">ART FILLER LIPS</label><input type="checkbox" name="LIPS" id="LIPS"> <label for="VOLUME">ART FILLER VOLUME</label><input type="checkbox" name="VOLUME" id="VOLUME"> <label for="LINES">ART FILLER FINE LINES</label><input type="checkbox" name="LINES" id="LINES"> <label for="NCTF135">NCTF135</label><input type="checkbox" name="NCTF135" id="NCTF135"> <label for="NCTF135HA">NCTF135 HA</label><input type="checkbox" name="NCTF135HA" id="NCTF135HA"> ) son rellenos cutaneos y biorevitalizacion, compuestos por ácido hialurónicopolivalente reticulado y un coctail de vitaminas, minerales y aminoacidos, destinados a inyectarse en la piel para corregir las lineas, arrugas y pliegues faciales, lineas de la sonrisa, contornos faciales y pomulos. Tambien pueden ser utilizados para restaurar la elasticidad y reducir imperfecciones en la superficie de la piel y mejorar la calidad de la misma.</P>
+                <p>Mi medico me ha explicado el uso y las indicaciones de los productos FILLMED y todas mis preguntas han sido respondidas satisfactoriamente, se me ha informado especificamente lo siguiente: despues del tratamiento pueden producirse algunas reacciones asociadas con frecuencia a las inyecciones, como enrojecimineto, hinchazon, dolor, prurito, hematoma y dolor a la palmitacion en la zona del implante. La mayoria son de grado leve o moderado y se responden espontaneamente unos dias despues de la inyeccion.</p>
+                <p>Otro tipo de reacciones son muy poco fuertes, pero en uno de cada 2000 pacientes aproximadamente se ha observado reacciones alergicas localizadas despues de una o mas inyecciones. Consistian por lo general en hinchazon y endurecimiento en la zona del implante, que a veces afectaba a los tejidos circundantes. Tambien se han descrito enrojecimiento, dolor a la palpacion. Estas reacciones aparecen unos dias despues de la inyeccion o bien transcurridas varias semanas, y la mayoria son de grado leve o moderado con una duracion media de dos semanas, y en casos muy poco frecuentes han persistido varios meses, si la inyeccion ha sido muy superficial.</p>
+                <p>En casos muy poco frecuentes (menos de uno cada 15000 tratamientos) se ha observado un endurecimiento prolongado, la formacion de un absceso o una tonalidad grisácea de la piel en las zonas de implantacíon. Estas reacciones pueden aparecer entre semanas y meses despues de las inyecciones, y pueden persistir durante varios meses, pero generalmente se resuelven con el tiempo. Con una frecuencia todavía menor se dan casos de formacion de una costra y de despegamiento del tejido en la zona tratada, lo que puede dejar una cicatriz superficial.</p>
+                <p>Mi medico me ha informado tambien que, dependiendo de la zona tratada, del tipo de piel y de la técina de inyección, el efecto del tratamiento con los productos FILLMED puede durar 6 y 12 meses, pero que en algunos casos la duracion del efecto puede ser menor o incluso mayor. Los retoques y los tratamientos de mantenimiento ayudan a mantener el grado deseado de corrección.</p>                
+                <p style="margin-top: 1rem;">He espondido en la medida de mis conocimientos a las preguntas sobre mis antecedentes médicos. Tambien he recibido las recomendaciones para despues del tratamiento y he entendido la importancia de seguir dichas recomendaciones.</p>
+                <p>Doy mi consentimiento a que se realice el tratamiento con los productos FILLMED</p>
+            </section>
+            <section id="firmas">
+                <section id="paciente">
+                    <canvas id="firma" width="400" height="160">
+                    </canvas>
+                    <button id="clearp"><img src="../../images/recycle-sign.png" width="20" alt=""></button>
+                    <div class="datos">
+                        <p>Firma del paciente </p>
+                        <p>CC <span id="cedula"></span></p>
+                        <input type="text" name="" id="">
+                        <P>Nombre del paciente</P>
+                    </div>
+                </section>
+                <!-- <section id="aneste">
+                    <canvas id="firma" width="400" height="160">
+                    </canvas>
+                    <button id="cleara"><img src="../../images/recycle-sign.png" width="20" alt=""></button>
+                    <div class="datos">
+                        <p>Firma del medico tratante</p>
+                        <p>CC <span id="cedula1"></span></p>
+                    </div>
+                </section> -->
+                <div style="height: 50px;">
+                    <button id="btnCrearPdf"><img src="../../images/pdf.png" width="23" alt=""></button>
+                </div>
+            </section>
+    </div>
+    </div>
+    <script src="../../js/script.js"></script>
+    <script src="../../js/html2pdf.bunle.js"></script>
+</page>
+</html>

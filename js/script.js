@@ -110,12 +110,32 @@ function renderCanvasId(canvas){
 }
 }
 
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
     // Escuchamos el click del botón
     const $boton = document.querySelector("#btnCrearPdf");
     
     if($boton){
         $boton.addEventListener("click", () => {
+
+            let checboxes = document.querySelectorAll('input[type=checkbox]')
+
+            checboxes.forEach((checkbox) =>{
+                    if (!checkbox.checked){
+                        checkbox.type = 'hidden'
+                        checkbox.checked = true
+                        console.log(checkbox.checked)
+                        let id = ""+checkbox.id
+                        let labelp = document.querySelector(`label[for=${id}]`)
+                        labelp.style.display = 'none'
+                    }else{
+                        checkbox.type = 'hidden'
+                    }
+            })
+
             let inputs = document.querySelectorAll("input")
             let array = [... inputs]
             let deleteStyle = document.getElementById('container')
@@ -141,11 +161,12 @@ document.addEventListener("DOMContentLoaded", () => {
             }
     
             let displayFirmas = document.getElementById('firmas')
-            console.log(displayFirmas)
+
             displayFirmas.style.display = "flex"
             displayFirmas.style.flexDirection = "space-between"
     
             deleteStyle.classList.remove('container')
+            console.log(deleteStyle)
     
             clearPaciente.style.display = "none"
             if(clearAnest) clearAnest.style.display = "none"
@@ -155,7 +176,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const cedula = document.getElementById("cedula")
             if (cedula)var valueCedula = cedula.value
             const cedula1 = document.getElementById("cedula1")
-            cedula1.innerHTML = "<span>" + valueCedula + "</span>"
+            if (cedula1) cedula1.innerHTML = "<span>" + valueCedula + "</span>"
             array.forEach(function(v){
                 let val = v.value
                 let element = document.createElement("span")
@@ -166,7 +187,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const elementoParaConvertir = document.body; // <-- Aquí puedes elegir cualquier elemento del DOM
             html2pdf()
                 .set({
-                    margin: [15, 20, 30, 15],
+                    margin: [15, 20, 30, 20],
                     filename: valueCedula +'.pdf',
                     image: {
                         type: 'jpeg',
@@ -190,7 +211,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         floatPrecision: 16
                     },
                     pagebreak: {
-                        after: '.next-page'
+                        after: '.next-page',
                     }
                 })
                 .from(elementoParaConvertir)

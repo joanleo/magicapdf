@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acta de Consentimiento</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/fontawesome.min.css" integrity="sha512-shT5e46zNSD6lt4dlJHb+7LoUko9QZXTGlmWWx0qjI9UhQrElRb+Q5DM7SVte9G9ZNmovz2qIaV7IWv0xQkBkw==" crossorigin="anonymous" />
+</head>
+<page >   
+    <div class="container" id="container">    
+        <div class="title">
+            <h1>Consentimiento Informado</h1>
+        </div>
+        <div class="consentimiento"> 
+            <section>
+                <p>Yo <input type="text" required/> identificado(a) con número de documento <input id="cedula" type="number" required />, expedida en la ciudad de <input type="text">, declaro que conozco y acepto las condiciones incluidas en las políticas y condiciones de clientes por MAGICA ESCULTURA S.A.S, las cuales consisten en que una vez cancelado algún abono o pago, por concepto de tratamientos estéticos o procedimientos quirúrgicos, no se realizará ningún reintegro del valor abonado por parte de ellos. Por lo tanto, el abono será redimible en otro tratamiento o en bonos de regalo.</p>
+                <br>
+                <p>En constancia de lo anterior se firma en Santiago de Cali, a los <span id="day"></span> días del mes de 
+                    <span id="month"></span> del <span id="year"></span></p>
+            </section>
+            <section id="firmas">
+                <section id="paciente">
+                    <canvas id="firma" width="400" height="180">
+                    </canvas>
+                    <button id="clearp"><img src="./images/recycle-sign.png" width="20" alt=""></button>
+                    <div class="datos">
+                        <p>Firma del Paciente</p>
+                        <p>CC <span id="cedula1"></span></p>
+                    </div>
+                </section>
+                
+            </section>
+            <div style="height: 50px;">
+                <button id="btnCrearPdf"><img src="./images/pdf.png" width="23" alt=""></button>                
+            </div>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+    <script src="./js/html2pdf.bunle.js"></script>
+</page>
+</html>
